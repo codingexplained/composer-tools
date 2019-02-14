@@ -35,11 +35,11 @@ parser.add_argument('--config',
                     help='Specify the path to the configuration file instead of using the default location')
 parser.add_argument('--packages',
                     nargs='+',
-                    help='Specify packages for which the action should be performed. Currently only supported for the "ln" action.')
+                    help='Specify packages for which the action should be performed. Currently only supported for the "ln" action')
 parser.add_argument('--composer-install-options',
                     nargs='+',
                     default=[],
-                    help='Specify options passed to "composer install".')
+                    help='Specify options passed to "composer install"')
 parser.add_argument('--force-absolute', action='store_true', help='Force generated paths to be absolute')
 
 args = parser.parse_args()

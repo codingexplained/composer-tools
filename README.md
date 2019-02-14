@@ -81,7 +81,9 @@ relative to the project root within the container.
 
 ```
 usage: composer-tools [-h] [--config CONFIG]
-                      [--packages PACKAGES [PACKAGES ...]] [--force-absolute]
+                      [--packages PACKAGES [PACKAGES ...]]
+                      [--composer-install-options COMPOSER_INSTALL_OPTIONS [COMPOSER_INSTALL_OPTIONS ...]]
+                      [--force-absolute]
                       {ln,reset}
 
 Switch between local and repository Composer package versions.
@@ -94,8 +96,11 @@ optional arguments:
   --config CONFIG       Specify the path to the configuration file instead of
                         using the default location
   --packages PACKAGES [PACKAGES ...]
-                        Specify packages for which the action should be performed. 
-                        Currently only supported for the "ln" action.
+                        Specify packages for which the action should be
+                        performed. Currently only supported for the "ln"
+                        action
+  --composer-install-options COMPOSER_INSTALL_OPTIONS [COMPOSER_INSTALL_OPTIONS ...]
+                        Specify options passed to "composer install"
   --force-absolute      Force generated paths to be absolute
 ```
 
