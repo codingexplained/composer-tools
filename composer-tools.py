@@ -108,6 +108,8 @@ for full_package in packages:
     if args.action == Action.LINK.value:
         print('Symlinking', 'vendor/' + full_package, 'to', target_path)
         os.symlink(target_path, package_path)
-        invoke_composer(['dump-autoload'])
-    else:
-        invoke_composer(['install', ' --'.join([''] + args.composer_install_options)])
+
+if args.action == Action.LINK.value:
+    invoke_composer(['dump-autoload'])
+else:
+    invoke_composer(['install', ' --'.join([''] + args.composer_install_options)])
